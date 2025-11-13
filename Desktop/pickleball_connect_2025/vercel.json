@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app.py"
+    }
+  ],
+  "env": {
+    "FLASK_ENV": "production"
+  }
+}
+```
+
+### 2. **Erstelle `requirements.txt`** (sollte schon existieren):
+```
+flask==3.0.0
+flask-sqlalchemy==3.1.1
+psycopg2-binary==2.9.9
+python-dotenv==1.0.0
+twilio==8.10.0
